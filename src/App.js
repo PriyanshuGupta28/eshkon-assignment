@@ -1,25 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Routes,
+} from "react-router-dom";
+import { Provider } from "react-redux";
+import { createStore } from "redux";
+// import rootReducer from "./redux/reducers";
+import "./App.css";
+import LoginPage from "./components/pages/LoginPage";
+import SecondPage from "./components/pages/SecondPage";
+import rootReducer from "./components/Reducers/reducers";
+import { gapi } from "gapi-script";
 
-function App() {
+const store = createStore(rootReducer);
+
+const App = () => {
+  const clientId =
+    "832489980032-eodbe0jbulic1aa2r4tmpcbepr4nldvp.apps.googleusercontent.com";
+
+  useEffect(() => {
+    // Initialize Google API client
+    function start() {
+      gapi.client.init({
+        clientId: clientId, // Set the client ID for authentication
+        scope: "", // Set the scope of access permissions (if required)
+      });
+    }
+
+    // Load the Google API client and start initialization
+    gapi.load("client:auth2", start);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <Router>
+        <Routes>
+          <Route path="/" element={<LoginPage />} />{" "}
+          {/* Render LoginPage component when the URL path is "/" */}
+          <Route path="/second-page/*" element={<SecondPage />} />{" "}
+          {/* Render SecondPage component when the URL path starts with "/second-page/" */}
+        </Routes>
+      </Router>
+    </Provider>
   );
-}
+};
 
 export default App;

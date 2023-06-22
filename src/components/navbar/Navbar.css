@@ -1,0 +1,46 @@
+/* Styles for the navbar */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #f5f5f5; /* Background color of the navbar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle elevation effect */
+}
+
+.navbar-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333; /* Color of the navbar logo */
+}
+
+.logout-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: transparent; /* Transparent background for the logout button */
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: #555; /* Color of the logout button text */
+}
+
+.bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin: 2px;
+  background-color: #555; /* Color of the horizontal bars in the logout button */
+  transition: transform 0.3s ease; /* Smooth transition effect for the bars */
+}
+
+.logout-button:hover .bar {
+  background-color: #333; /* Color of the bars on hover */
+}
+
+.logout-button:active .bar {
+  transform: scale(0.9); /* Slightly scale down the bars on button press */
+}

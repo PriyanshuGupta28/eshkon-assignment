@@ -1,0 +1,84 @@
+/* Styles for the login page */
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Set a minimum height to fill the viewport */
+  background: #f0f2f5; /* Background color of the login page */
+}
+
+.login-content {
+  background: #fff; /* Background color of the login content area */
+  max-width: 400px;
+  padding: 40px;
+  border-radius: 8px; /* Rounded corners for the login content area */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle elevation effect */
+}
+
+.login-heading {
+  color: #333; /* Color of the login heading */
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 40px; /* Bottom margin for spacing */
+}
+
+.google-login-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #4285f4; /* Background color of the Google login button */
+  color: #fff; /* Text color of the Google login button */
+  border: none;
+  border-radius: 4px; /* Rounded corners for the Google login button */
+  padding: 12px 24px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease; /* Smooth transition effect for the background */
+}
+
+.google-login-button:hover {
+  background: #357ae8; /* Background color of the Google login button on hover */
+}
+
+.google-login-button:focus {
+  outline: none; /* Remove the outline when the Google login button is focused */
+}
+
+.google-login-button img {
+  margin-right: 10px; /* Right margin for spacing between the Google icon and text */
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+  .login-content {
+    max-width: 300px; /* Adjust the maximum width of the login content for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .login-content {
+    padding: 24px; /* Adjust the padding of the login content for smaller screens */
+  }
+
+  .login-heading {
+    font-size: 20px; /* Adjust the font size of the login heading for smaller screens */
+    margin-bottom: 30px; /* Adjust the bottom margin of the login heading for smaller screens */
+  }
+
+  .google-login-button {
+    padding: 10px 20px; /* Adjust the padding of the Google login button for smaller screens */
+    font-size: 14px; /* Adjust the font size of the Google login button for smaller screens */
+  }
+
+  .google-login-button img {
+    width: 18px;
+    height: 18px; /* Adjust the size of the Google icon for smaller screens */
+    margin-right: 8px; /* Adjust the right margin of the Google icon for smaller screens */
+  }
+}

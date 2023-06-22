@@ -1,0 +1,131 @@
+.container {
+  display: flex;
+  flex-direction: row; /* Arrange the elements in a row */
+  align-items: center; /* Center align the items vertically */
+  padding: 20px;
+  margin: auto; /* Center the container horizontally */
+  justify-content: space-between; /* Distribute the items evenly along the row */
+  width: 80%; /* Set the width of the container */
+}
+
+.welcome-text {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.second-page-container {
+  display: flex;
+  justify-content: center; /* Center align the content horizontally */
+  align-items: center; /* Center align the content vertically */
+  margin: auto; /* Center the container horizontally */
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column; /* Arrange the elements in a column */
+  align-items: center; /* Center align the items horizontally */
+  margin-right: 10rem; /* Add right margin for spacing */
+  margin: auto; /* Center the column horizontally */
+}
+
+.user-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.user-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.user-info {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #777;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column; /* Arrange the elements in a column */
+  align-items: center; /* Center align the items horizontally */
+  width: 50rem; /* Set the width of the column */
+  margin: auto; /* Center the column horizontally */
+}
+
+.card {
+  background-color: #fffefe;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add a box shadow for a subtle elevation effect */
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card-description {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.card-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.update-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.logout-button {
+  background-color: #dc3545;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Styles for desktop/laptop screens */
+@media only screen and (min-width: 1024px) {
+  /* Add your CSS styles for desktop here */
+  /* For example: */
+  .container {
+    flex-direction: row; /* Maintain row direction for larger screens */
+  }
+}
